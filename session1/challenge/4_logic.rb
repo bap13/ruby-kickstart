@@ -10,4 +10,16 @@
 # grade(15, true)   # => "B"
 
 def grade(num_books, reads_books)
+  grades = %w[D C B A]
+  bump = 0
+  bump = 1 if reads_books 
+
+  case num_books
+  when 0...10
+    grades[0 + bump]
+  when 10..20
+    grades[1 + bump]
+  else
+    grades[2 + bump]
+  end
 end
